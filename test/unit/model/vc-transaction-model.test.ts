@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Coöperatieve Rabobank U.A.
+ * Copyright 2020 Coöperatieve Rabobank U.A.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,6 +43,14 @@ describe('VcTransaction constructor', function () {
     }
 
     assert.doesNotThrow(createSut)
+  })
+
+  it('should generate a new uuidv4 if not defined', () => {
+    const txWithoutUuid = Object.assign({}, transactionWithoutOptionals)
+    delete txWithoutUuid.uuid
+
+    const sut = new VcTransaction(txWithoutUuid)
+    assert.match(sut.uuid, /[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}/)
   })
 
   it('should convert a JSON object to a VcTransaction class', () => {
