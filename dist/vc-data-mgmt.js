@@ -171,7 +171,7 @@ class VcDataManagement {
             type: [credential.proof.type],
             datetime: credential.issuanceDate,
             statements: statements,
-            context: credential.context || []
+            context: credential.context || ['https://www.w3.org/2018/credentials/v1']
         };
     }
     /**
