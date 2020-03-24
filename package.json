@@ -1,6 +1,6 @@
 {
   "name": "ula-vc-data-management",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A ULA data management plugin for W3C Verifiable Credentials",
   "engines": {
     "node": ">=8.15.0",

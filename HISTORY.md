@@ -1,3 +1,9 @@
+# 0.1.2 / 24-03-2020
+
+**Enhancements**
+- Updated dependencies
+- Downgrading Typescript to 3.4.5 to ensure compatibility
+
 # 0.1.1 / 08-01-2020
 
 **Enhancements**
